@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+Nhập tên: <input id="input" value><br>
+<button onclick="xin_chao()">OK</button><br>
+<div id="loi_chao"></div>
+<script>
+    var xin_chao=function(){
+        var ten=document.getElementById("input").value
+        loi_chao="Xin chào "+ten+"<br>"
+        document.getElementById("loi_chao").innerHTML=loi_chao
+    }
+    var tuoi=18
+    tuoi= parseInt(window.prompt("Nhập tuổi:"))
+    var student={
+        name: "Hiếu",
+        age: 22,
+        relationship: "single",
+        address:{
+            Quan: "Hai Bà Trưng",
+            Phuong: "Bách Khoa"
+        }
+    }
+    //object
+    for(var i=0;i<10;i++){
+        document.write("Năm nay ",tuoi+i," tuổi.<br>")
+    }
+    document.write(student.address.Phuong,"<br>")
+    var tim_nam_sinh=function(tuoi){
+        var nam_sinh=2023-tuoi
+        return nam_sinh
+    }
+    document.write(tim_nam_sinh(26),"<br>")
+    var ar=["Hiếu","Linh","Tú"]
+    ar.push("Trung")
+    ar[3]=123
+    document.write(ar[3],"<br>")
+    var str="Hiếu 20 08 01"
+    document.write(str.length)
+    var thong_bao=function(){
+        document.getElementById("loi_chao").innerHTML="Hết giờ"
+    }
+    setTimeout(thong_bao,5000)
+</script>
+</html>
